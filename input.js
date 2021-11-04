@@ -12,22 +12,22 @@ const setupInput = function (conn) {
   return stdin;
 };
 
-const handleUserInput = function () {
+const handleUserInput = function (key) {
   if (key === '\u0003') {
     process.exit();
   }
-  if (key === 87) {
-    connection.key("Move: up");
+  if (key === "w") {
+    conn.write('Move: up');
   }
-  // if (key === 65) {
-  //   console.log("Move: up");
-  // }
-  // if (key === 83) {
-  //   console.log("Move: up");
-  // }
-  // if (key === 68) {
-  //   console.log("Move: up");
-  // }
+  if (key === "a") {
+    conn.write("Move: up");
+  }
+  if (key === "s") {
+    conn.write("Move: up");
+  }
+  if (key === "d") {
+    conn.write("Move: up");
+  }
 };
 
 module.exports = setupInput;
