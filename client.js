@@ -19,7 +19,10 @@ const connect = function () {
   conn.setEncoding("utf8");
 
   return conn;
+
 };
+
+module.exports = connect;
 
 
 
